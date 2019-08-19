@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class MainViewController: UIViewController, UIScrollViewDelegate {
     //MARK: Properties
     let dataProvider = DataProvider()
     var mainView: MainView {
@@ -26,6 +26,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+        
         addPanGesture()
         mainView.sliderView.delegate = self
         mainView.backgroundColor = #colorLiteral(red: 0.2373929024, green: 0.2572440505, blue: 0.2978106141, alpha: 1)

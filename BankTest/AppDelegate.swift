@@ -15,7 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let mainbanVC = MainViewController()
+        let banVC = MainViewController()
+        
+        let tapBarController = UITabBarController()
+        tapBarController.setViewControllers([mainbanVC,banVC], animated: true)
+        self.window?.rootViewController = tapBarController
+        self.window?.makeKeyAndVisible()
         return true
     }
 
