@@ -9,8 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController, UIScrollViewDelegate {
-    
-    var dataProvider = DataProvider()
+    //MARK: Properties
+    let dataProvider = DataProvider()
     var mainView: MainView {
         guard let view = self.view as? MainView else { return MainView()}
         return view
@@ -19,6 +19,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         return .lightContent
     }
     
+    //MARK: Methods
     override func loadView() {
         self.view = MainView(frame: UIScreen.main.bounds)
     }

@@ -12,19 +12,23 @@ class SliderManager {
     
     class func createSlides() -> [SlideView] {
         let slide1 = SlideView()
-        // method for generation sliders
+        
+        let moneLabelString = "10,00 ₽"
+        let attributedString = NSMutableAttributedString(string: moneLabelString)
+        attributedString.addAttribute(.foregroundColor, value: UIColor.white, range: NSRange(location: 0, length: 2))
+        
         slide1.bankAccountLabel.text = "расчетный 4039813740183"
-        slide1.moneyLabel.text = "10,00 ₽"
+        slide1.moneyLabel.attributedText = attributedString
         slide1.moneyWithOverdraftLabel.text = "10,00 ₽ с овердрафтом"
         
         let slide2 = SlideView()
         slide2.bankAccountLabel.text = "расчетный 4039813740183"
-        slide2.moneyLabel.text = "10,00 ₽"
+        slide2.moneyLabel.attributedText = attributedString
         slide2.moneyWithOverdraftLabel.text = "10,00 ₽ с овердрафтом"
         
         let slide3 = SlideView()
         slide3.bankAccountLabel.text = "расчетный 4039813740183"
-        slide3.moneyLabel.text = "10,00 ₽"
+        slide3.moneyLabel.attributedText = attributedString
         slide3.moneyWithOverdraftLabel.text = "10,00 ₽ с овердрафтом"
         
         return [slide1, slide2, slide3]

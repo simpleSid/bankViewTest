@@ -9,8 +9,8 @@
 import UIKit
 
 class SlideView: UIView {
-    
-    var bankAccountLabel: UILabel = {
+    //MARK: Properties
+    let bankAccountLabel: UILabel = {
         var label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 10))
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = label.font.withSize(20)
@@ -19,7 +19,7 @@ class SlideView: UIView {
         return label
     }()
     
-    var moneyLabel: UILabel = {
+    let moneyLabel: UILabel = {
         var label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = label.font.withSize(30)
@@ -28,7 +28,7 @@ class SlideView: UIView {
         return label
     }()
     
-    var moneyWithOverdraftLabel: UILabel = {
+    let moneyWithOverdraftLabel: UILabel = {
         var label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 18))
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = label.font.withSize(20)
@@ -37,6 +37,7 @@ class SlideView: UIView {
         return label
     }()
     
+    //MARK: Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -55,14 +56,24 @@ class SlideView: UIView {
     }
     
     func setConstraints() {
+        setBankAccountLabelConstraints()
+        setMoneyLabelConstraints()
+        setMoneyWithOverdraftLabelConstraints()
+    }
+    
+    func setBankAccountLabelConstraints() {
         bankAccountLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
         bankAccountLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
         bankAccountLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
-        
+    }
+    
+    func setMoneyLabelConstraints(){
         moneyLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
         moneyLabel.topAnchor.constraint(equalTo: bankAccountLabel.bottomAnchor, constant: 8).isActive = true
         moneyLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
-        
+    }
+    
+    func setMoneyWithOverdraftLabelConstraints(){
         moneyWithOverdraftLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
         moneyWithOverdraftLabel.topAnchor.constraint(equalTo: moneyLabel.bottomAnchor, constant: 8).isActive = true
         moneyWithOverdraftLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true

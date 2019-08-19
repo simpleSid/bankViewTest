@@ -9,15 +9,15 @@
 import UIKit
 
 class TableHeaderView: UIView {
-    
-    var dateLabel: UILabel = {
+    //MARK: Properties
+    let dateLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
     }()
     
-    var totalAmountLabel: UILabel = {
+    let totalAmountLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .right
@@ -25,6 +25,7 @@ class TableHeaderView: UIView {
         return label
     }()
     
+    //MARK: Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
         

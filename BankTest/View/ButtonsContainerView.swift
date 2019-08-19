@@ -9,29 +9,29 @@
 import UIKit
 
 class ButtonsContainerView: UIView {
-    
-    var accountStoryButton: UIButton = {
+    //MARK: Properties
+    let accountStoryButton: UIButton = {
         let button = UIButton()
         button.setBackgroundImage(UIImage(named: "extract"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    var accountDetailsButton: UIButton = {
+    let accountDetailsButton: UIButton = {
         let button = UIButton()
         button.setBackgroundImage(UIImage(named: "rec"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    var otherButton: UIButton = {
+    let otherButton: UIButton = {
         let button = UIButton()
         button.setBackgroundImage(UIImage(named: "other"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    var accountStoryLabel: UILabel = {
+    let accountStoryLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
@@ -40,7 +40,7 @@ class ButtonsContainerView: UIView {
         return label
     }()
     
-    var accountDetailsLabel: UILabel = {
+    let accountDetailsLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
@@ -49,7 +49,7 @@ class ButtonsContainerView: UIView {
         return label
     }()
     
-    var otherLabel: UILabel = {
+    let otherLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
@@ -58,6 +58,7 @@ class ButtonsContainerView: UIView {
         return label
     }()
     
+    //MARK: Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubViews()

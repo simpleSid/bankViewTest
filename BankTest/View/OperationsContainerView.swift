@@ -9,7 +9,7 @@
 import UIKit
 
 class OperationsContainerView: UIView {
-    
+    //MARK: Properties
     var searchBar: UISearchBar = {
         let bar = UISearchBar()
         bar.translatesAutoresizingMaskIntoConstraints = false
@@ -32,7 +32,7 @@ class OperationsContainerView: UIView {
         return button
     }()
     
-    var operationsHistoryTableView: UITableView = {
+    let operationsHistoryTableView: UITableView = {
         var tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.rowHeight = 100
@@ -40,6 +40,7 @@ class OperationsContainerView: UIView {
         return tableView
     }()
     
+    //MARK: Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubViews()

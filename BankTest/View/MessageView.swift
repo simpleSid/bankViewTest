@@ -9,7 +9,7 @@
 import UIKit
 
 class MessageView: UIView {
-    
+    //MARK: Properties
     let messageLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -31,6 +31,7 @@ class MessageView: UIView {
     }()
     var messageButtonHeightAnchor: NSLayoutConstraint!
     
+    //MARK: Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
         

@@ -9,8 +9,8 @@
 import UIKit
 
 class MainView: UIView {
-    
-    var sliderView: UIScrollView = {
+    //MARK: Properties
+    let sliderView: UIScrollView = {
         let slider = UIScrollView()
         slider.showsHorizontalScrollIndicator = false
         slider.translatesAutoresizingMaskIntoConstraints = false
@@ -25,8 +25,8 @@ class MainView: UIView {
         return pageControl
     }()
     
-    var messageView: MessageView = {
-       let view = MessageView()
+    let messageView: MessageView = {
+        let view = MessageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1)
         view.layer.cornerRadius = 10
@@ -34,13 +34,13 @@ class MainView: UIView {
     }()
     var messageViewHeightAnchor: NSLayoutConstraint!
     
-    var buttonContainer: ButtonsContainerView = {
+    let buttonContainer: ButtonsContainerView = {
         let buttonContainer = ButtonsContainerView()
         buttonContainer.translatesAutoresizingMaskIntoConstraints = false
         return buttonContainer
     }()
     
-    var operationsContainerView: OperationsContainerView = {
+    let operationsContainerView: OperationsContainerView = {
         var view = OperationsContainerView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -49,6 +49,7 @@ class MainView: UIView {
     }()
     var operationsContainerViewAnchor: NSLayoutConstraint!
     
+    //MARK: Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
         

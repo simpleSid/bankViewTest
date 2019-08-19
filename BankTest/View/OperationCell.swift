@@ -9,7 +9,7 @@
 import UIKit
 
 class OperationCell: UITableViewCell {
-    
+    //MARK: Properties
     let companyImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -46,6 +46,7 @@ class OperationCell: UITableViewCell {
         return label
     }()
 
+    //MARK: Methods
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
